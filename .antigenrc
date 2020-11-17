@@ -1,0 +1,62 @@
+
+# Load oh-my-zsh library.
+antigen use oh-my-zsh
+
+
+
+# Load bundles from the default repo (oh-my-zsh).
+antigen bundle git
+#antigen bundle command-not-found
+#antigen bundle docker
+#antigen bundle colored-man-pages
+antigen bundle kubectl
+antigen bundle virtualenv
+
+
+antigen bundle unixorn/autoupdate-antigen.zshplugin
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle esc/conda-zsh-completion
+antigen bundle zzag/zsh-conda
+#antigen bundle chrissicool/zsh-256color
+antigen bundle make_k_into_p/p
+antigen bundle sindresorhus/pure
+#antigen bundle ael-code/zsh-colored-man-pages
+#antigen bundle gretzky/auto-color-ls
+
+
+#export NVM_LAZY_LOAD=true
+#antigen bundle lukechilds/zsh-nvm
+#antigen bundle Sparragus/zsh-auto-nvm-use
+
+export LD_LIBRARY_PATH="/usr/lib/cuda/lib64:$LD_LIBRARY_PATH"
+export LD_LIBRARY_PATH="/usr/lib/cuda/include:$LD_LIBRARY_PATH"
+
+
+#export PATH="/usr/local/cuda-11.0/bin:$PATH"
+#export LD_LIBRARY_PATH="/usr/local/cuda-11.0/lib64:$LD_LIBRARY_PATH"
+export NVM_DIR="$HOME/.nvm"
+export PATH="$HOME/.rbenv/bin:$PATH"
+#export JAVA_HOME="/usr/lib/jvm/java-14-openjdk-amd64/bin/java"
+export JUNIT_HOME="$HOME/.junit"
+export PATH="$JUNIT_HOME:$PATH"
+export CLASSPATH="$CLASSPATH:$JUNIT_HOME/junit-4.11.jar:$JUNIT_HOME/hamcrest-core-1.3.jar"
+
+export SPARK_HOME="/opt/spark"
+export PATH="$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin"
+export PYSPARK_PYTHON="/usr/bin/python3" 
+
+
+
+
+
+export VIRTUAL_ENV_DISABLE_PROMPT=no
+
+antigen apply
+                 
+source ~/.my_min/min.zsh
+
+~/.local/bin/setkeys
+
+neofetch
